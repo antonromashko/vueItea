@@ -1,0 +1,46 @@
+<!--
+   2 - Theme PopUp
+     - сделать попап
+     - в попапе должно быть несколько кнопок
+     - каждая кнопка изменяет цвет фона
+     - добавить кнопку которая закрывает попап
+     - на задний план попапа добавить полупрозрачный слой, при нажатии на него попап так же закрывается
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="vue">
+    <button
+            :style="showModalButtonClass"
+            @click="showModal = !showModal; currentColor = 'white';"
+    >
+        {{ mainButton }}
+    </button>
+    <div class="modal" :class="{'modal__visible': showModal}" @click.self="showModal = !showModal">
+        <div class="modal-content" :style="styleObject">
+            <div class="header">
+                <span class="close" @click="showModal = !showModal">&times;</span>
+            </div>
+            <div class="buttons-group">
+               <button
+                       v-for="(button, index) in buttonsList"
+                       :key="index"
+                       :style="button.style === currentColor ? '' : button.style"
+                       @click="currentColor = button.style['background-color']"
+               >
+                   {{ button.name }}
+               </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
