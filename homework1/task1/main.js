@@ -29,7 +29,7 @@ class MyVue {
       let button = document.createElement('button');
       button.className = button.innerHTML = key;
       let list = document.createElement('ul');
-      list.classList.add(...[key, 'active'])
+      list.classList.add(...[key, 'active']);
       value.forEach(item => {
         let row = document.createElement('li');
         row.innerHTML = item;
@@ -39,7 +39,7 @@ class MyVue {
       subItemDiv.insertAdjacentElement('beforeend', list);
       this.element.insertAdjacentElement('beforeend', subItemDiv)
       button.addEventListener('click', (e) => {
-        list.classList.toggle('active')
+        list.classList.toggle('active');
       })
     }
   }
@@ -56,5 +56,5 @@ const test = new MyVue({
     }
 });
 
-console.log(test)
+console.log(test);
 
