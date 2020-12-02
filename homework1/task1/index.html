@@ -13,18 +13,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="main">
-    <div v-cloak v-for="(value, name, index) of myLists" :key="index" class="current-list">
-        <button :class="name"
-                @click="enableLists.indexOf(name) >= 0 ? enableLists.splice(enableLists.indexOf(name), 1) : enableLists.push(name)">
-            {{ name }}
-        </button>
-        <ul v-for="val of value" v-if="enableLists.indexOf(name) >= 0">
-            <li>{{ val }}</li>
-        </ul>
+<div class="main">
+    <div id="vue">
+        <div v-cloak v-for="(value, name, index) of myLists" :key="index" class="current-list">
+            <button :class="name"
+                    @click="enableLists.indexOf(name) >= 0 ? enableLists.splice(enableLists.indexOf(name), 1) : enableLists.push(name)"
+            >
+                {{ name }}
+            </button>
+            <ul :class="name">
+                <li v-for="val of value" :class="[name, enableLists.indexOf(name) >= 0 ? '' : activeClass]">{{ val }}</li>
+                <!--<li v-for="val of value" v-if="enableLists.indexOf(name) >= 0">{{ val }}</li>-->
+            </ul>
+        </div>
+    </div>
+    <div id="js">
     </div>
 </div>
-
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="main.js"></script>
 </body>

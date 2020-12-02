@@ -2,9 +2,16 @@
     display: none;
 }
 
-#main {
+.main {
     display: flex;
     flex-direction: row;
+}
+
+#vue,
+#js {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 150px;
 }
 
 button {
@@ -31,4 +38,8 @@ button:focus {
 
 .eSports {
     background-color: #e59500;
+}
+
+.active {
+    display: none;
 }
