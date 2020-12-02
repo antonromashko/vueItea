@@ -1,0 +1,31 @@
+<!--HW
+1    - Сделать два варианта, на чистом js и vue.js:
+     - три массива со списками;
+     - выводить каждый из списков при нажатии на тайтл (кнопку) списка;
+     - создать три класса с стилями;
+     - создать три кнопки, навешать на них события 'click', событие должно изменять привязанный класс к спискам
+     - (не обязательный) застилить-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="main">
+    <div v-cloak v-for="(value, name, index) of myLists" :key="index" class="current-list">
+        <button :class="name"
+                @click="enableLists.indexOf(name) >= 0 ? enableLists.splice(enableLists.indexOf(name), 1) : enableLists.push(name)">
+            {{ name }}
+        </button>
+        <ul v-for="val of value" v-if="enableLists.indexOf(name) >= 0">
+            <li>{{ val }}</li>
+        </ul>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

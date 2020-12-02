@@ -1,0 +1,34 @@
+[v-cloak] {
+    display: none;
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    margin-left: 20px;
+    width: 75px;
+    height: 30px;
+}
+
+button:focus {
+    outline-width: 0;
+}
+
+.current-list {
+    margin-right: 50px;
+    width: 150px;
+}
+
+.devices {
+    background-color: #7ba6f5;
+}
+.topClubs {
+    background-color: #8bd78b;
+}
+
+.eSports {
+    background-color: #e59500;
+}
