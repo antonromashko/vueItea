@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="vue">
+<div id="vue" v-cloak>
     <button
             :style="showModalButtonClass"
             @click="showModal = !showModal; currentColor = 'white';"
