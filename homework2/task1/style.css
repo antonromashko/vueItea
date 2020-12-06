@@ -1,0 +1,42 @@
+li,
+.search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+ol {
+    width: 200px;
+}
+
+li {
+    justify-content: space-between;
+    padding: 5px;
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-color: rgba(3, 3, 3, 0.12);
+}
+
+.guests {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.search {
+    justify-content: center;
+    padding: 5px;
+}
+
+label,
+button,
+input {
+    padding: 5px;
+    margin: 5px;
+    border-color: rgba(3, 3, 3, 0.12);
+}
+
+button {
+    cursor: pointer;
+}

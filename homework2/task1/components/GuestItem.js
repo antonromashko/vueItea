@@ -1,4 +1,3 @@
-
 const GuestItem = {
     props: {
         guest: {
