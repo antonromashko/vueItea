@@ -77,10 +77,10 @@ const ContactList = {
     },
     openForm() {
       this.isContactForm = true;
-
     },
     saveContact(data) {
       this.contactList.push(data)
+      this.isContactForm = false;
     },
     deleteContact() {
       this.contactList = this.contactList.filter(item => item.id !== this.activeId)
