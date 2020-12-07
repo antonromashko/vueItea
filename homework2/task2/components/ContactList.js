@@ -84,6 +84,7 @@ const ContactList = {
     },
     deleteContact() {
       this.contactList = this.contactList.filter(item => item.id !== this.activeId)
+      this.activeId = null
     }
   }
 }
