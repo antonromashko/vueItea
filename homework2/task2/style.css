@@ -1,0 +1,160 @@
+#main {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin: 40px 0 0 0;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+.active {
+   background: gold;
+}
+
+.contact-list {
+    width: 250px;
+    height: 90%;
+    position: relative;
+}
+
+.contact-search {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 35px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.contact-search span {
+    margin-left: 25px;
+    background: yellow;
+    padding: 10px;
+}
+
+#search-input {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-color: rgba(3, 3, 3, 0.12);
+}
+
+li {
+    justify-content: space-between;
+    padding: 8px;
+    list-style: none;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: rgba(3, 3, 3, 0.12);
+    cursor: pointer;
+}
+
+li:hover {
+    background: #ffe76a;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.buttons-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+
+.delete,
+.create {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.delete {
+    width: 18px;
+    height: 18px;
+    color: red;
+}
+.create {
+    width: 19px;
+    height: 19px;
+    background-color: transparent;
+    color: green;
+    font-size: 25px;
+}
+
+.delete:hover {
+    background-color: #e5e5e5;
+}
+.create:hover {
+    color: #015d01;
+}
+
+.pending {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+#contact {
+    position: relative;
+    width: 500px;
+    margin: 0;
+}
+
+form {
+  display: grid;
+  max-width: 600px;
+}
+form input {
+  background: #fff;
+  border: 1px solid #9c9c9c;
+}
+form button {
+  background: lightgrey;
+  padding: 0.7em;
+  width: 100%;
+  border: 0;
+}
+form button:hover {
+  background: gold;
+}
+
+form label {
+  padding: 0.5em 0.5em 0.5em 0;
+}
+
+form input {
+  padding: 0.7em;
+  margin-bottom: 0.5rem;
+}
+input:focus {
+  outline: 3px solid gold;
+}
+
+@media (min-width: 400px) {
+  form {
+    grid-template-columns: 200px 1fr;
+    grid-gap: 16px;
+  }
+
+  form label {
+    text-align: right;
+    grid-column: 1 / 2;
+  }
+
+  form input,
+  form button {
+    grid-column: 2 / 3;
+  }
+}
